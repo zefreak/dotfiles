@@ -107,7 +107,7 @@ bindsym Mod1+d exec dmenu_run
 #bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
 #
 # instead of dmenu, using rofi
-#bindsym Mod1+d exec rofi -show run -lines 20 -eh 1.3 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$text-color" -hlfg "$bg-color" -font "System San Francisco Display 10"
+bindsym Mod1+d exec rofi -show run -lines 20 -eh 1.3 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$text-color" -hlfg "$bg-color" -font "System San Francisco Display 10"
 
 # change focus
 bindsym Mod1+$left focus left
