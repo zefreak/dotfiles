@@ -1,7 +1,8 @@
 execute pathogen#infect()
 
-set directory=/home/scott/.vim/swapfiles//
-set backupdir=/home/scott/.vim/backups//
+set directory=/home/sreed/.vim/swapfiles/
+set backupdir=/home/sreed/.vim/backups/
+set encoding=utf-8
 syntax on
 filetype plugin indent on
 set nocompatible
@@ -38,8 +39,8 @@ let g:airline_theme='wombat'
 set laststatus=2
 
 "Force.com Config
-let g:apex_backup_folder='/home/scott/.vim/vim-force/backup'
-let g:apex_temp_folder='/home/scott/.vim/vim-force/temp'
-let g:apex_properties_folder='/home/scott/.vim/vim-force'
-let g:apex_tooling_force_dot_com_path='/home/scott/.vim/vim-force/tooling-force.com.jar'
+let g:apex_backup_folder='/home/sreed/.vim/vim-force/backup'
+let g:apex_temp_folder='/home/sreed/.vim/vim-force/temp'
+let g:apex_properties_folder='/home/sreed/.vim/vim-force'
+let g:apex_tooling_force_dot_com_path='/home/sreed/.vim/vim-force/tooling-force.com.jar'
 let g:apex_API_version='38.0'

@@ -11,8 +11,8 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font pango:monospace 8
-font pango:System San Fransisco Display 10
+font pango:monospace 8
+#font pango:System San Fransisco Display 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -32,12 +32,6 @@ set $bg-color #2f343f
 set $bd-color #e50000
 set $text-color #f3f4f5
 
-# i3-gaps stuff
-gaps inner 15
-gaps outer 10
-for_window [class="^.*"] border pixel 3
-smart_borders on
-
 # Styling
 #                  border        background      text         indicator    child border
 client.focused     $bd-color     $bg-color       $text-color  $bd-color    $bd-color
@@ -47,15 +41,13 @@ client.focused     $bd-color     $bg-color       $text-color  $bd-color    $bd-c
 exec_always --no-startup-id sh ~/.fehbg
 
 # compton settings
-exec compton
+#exec compton
 
 # Press $mod+o followed by a key to launch the respective application or return to default mode
-set $mode_launcher Launch: [c]hrome [q]utebrowser [p]ostman
+set $mode_launcher Launch: [p]ostman
 bindsym $mod+o mode "$mode_launcher"
 
 mode "$mode_launcher" {
-    bindsym c exec google-chrome, mode "default"
-    bindsym q exec qutebrowser, mode "default"
     bindsym p exec postman, mode "default"
 
     bindsym Escape mode "default"
@@ -108,14 +100,14 @@ bindsym Mod1+Shift+q kill
 bindsym $sup+q kill
 
 # start dmenu (a program launcher)
-# bindsym Mod1+d exec dmenu_run
+bindsym Mod1+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
 #
 # instead of dmenu, using rofi
-bindsym Mod1+d exec rofi -show run -lines 20 -eh 1.3 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$text-color" -hlfg "$bg-color" -font "System San Francisco Display 10"
+#bindsym Mod1+d exec rofi -show run -lines 20 -eh 1.3 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$text-color" -hlfg "$bg-color" -font "System San Francisco Display 10"
 
 # change focus
 bindsym Mod1+$left focus left
